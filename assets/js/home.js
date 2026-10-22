@@ -1,5 +1,7 @@
 // Page d'accueil : hero, filtres par catégorie, recherche et « Voir plus ».
-const PAGE_SIZE = 6;
+// Deux rangées complètes à la fois, quel que soit le nombre de colonnes
+const pageSize = () =>
+  getComputedStyle(document.querySelector(".grid")).gridTemplateColumns.split(" ").length * 2;
 
 function renderHero() {
   const featured = window.ARTICLES.filter((a) => a.featured);
@@ -38,7 +40,7 @@ function initBlog() {
 
   let category = params.get("cat") || "all";
   let query = "";
-  let visible = PAGE_SIZE;
+  let visible = pageSize();
 
   filters.insertAdjacentHTML(
     "beforeend",
@@ -74,7 +76,7 @@ function initBlog() {
     const btn = e.target.closest(".filter");
     if (!btn) return;
     category = btn.dataset.cat;
-    visible = PAGE_SIZE;
+    visible = pageSize();
     const url = new URL(location.href);
     if (category === "all") url.searchParams.delete("cat");
     else url.searchParams.set("cat", category);
@@ -84,12 +86,12 @@ function initBlog() {
 
   search.addEventListener("input", () => {
     query = search.value;
-    visible = PAGE_SIZE;
+    visible = pageSize();
     render();
   });
 
   more.addEventListener("click", () => {
-    visible += PAGE_SIZE;
+    visible += pageSize();
     render();
   });
 

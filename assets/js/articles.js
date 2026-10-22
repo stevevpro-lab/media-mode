@@ -4,6 +4,11 @@
 const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3Kwk91zPCT78hRtN6MFnG2be45S/hf_20261022_";
 const PHOTO = (id) => ({ image: `${HF}${id}.png`, thumb: `${HF}${id}_min.webp` });
 
+// Photo des autrices, affichée dans les pastilles « par … »
+window.AUTHORS = {
+  "Léa": { photo: `${HF}095813_0819bc9c-79ca-4d71-84ad-1954d6472a4c_min.webp` },
+};
+
 window.CATEGORIES = [
   { id: "mode", label: "Mode" },
   { id: "deco", label: "Déco" },

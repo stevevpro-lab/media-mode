@@ -11,7 +11,7 @@
     <div class="eyebrow">${escapeHtml(categoryLabel(article.category))} · ${escapeHtml(article.tag)}</div>
     <h1>${escapeHtml(article.title)}</h1>
     <div class="hero-actions">
-      <span class="author-chip"><span class="avatar">${initials(article.author)}</span>par ${escapeHtml(article.author)}</span>
+      <span class="author-chip">${avatarHtml(article.author)}par ${escapeHtml(article.author)}</span>
       <span class="author-chip" style="padding-left:16px">${formatDate(article.date)} · ${article.readTime} min de lecture</span>
     </div>`;
 

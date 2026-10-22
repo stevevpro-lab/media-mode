@@ -10,7 +10,7 @@ function renderHero() {
 
   hero.innerHTML = `
     <a class="card-overlay hero-main" href="${articleUrl(main)}">
-      ${mediaHtml(main.image.replace("w=1200", "w=1800"), main.title)}
+      ${mediaHtml(main.image, main.title)}
       <div class="eyebrow">${escapeHtml(categoryLabel(main.category))}</div>
       <h1>${escapeHtml(main.title)}</h1>
       <div class="hero-foot">
@@ -24,7 +24,7 @@ function renderHero() {
     <div class="hero-side">
       ${side.slice(0, 2).map((a) => `
         <a class="card-overlay" href="${articleUrl(a)}">
-          ${mediaHtml(a.image.replace("w=1200", "w=900"), a.title)}
+          ${mediaHtml(a.image, a.title)}
           <div class="eyebrow">${escapeHtml(categoryLabel(a.category))}</div>
           <h2>${escapeHtml(a.title)}</h2>
         </a>`).join("")}

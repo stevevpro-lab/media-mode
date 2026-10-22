@@ -32,7 +32,7 @@ Ajoutez un objet en tête de `window.ARTICLES` dans `assets/js/articles.js` :
   tag: "Tendances",
   title: "Titre de l'article",
   excerpt: "Une ou deux phrases de résumé.",
-  image: IMG("photo-xxxxxxxx"),     // identifiant Unsplash, ou une URL complète
+  image: "https://…/photo.jpg",     // URL complète de la photo
   author: "Léa",
   date: "2026-10-22",
   readTime: 4,

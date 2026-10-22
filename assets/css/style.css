@@ -91,6 +91,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   transition: background .2s, color .2s;
 }
 .pill:hover { background: var(--ink); color: var(--surface); }
+.shop-pill { background: var(--ink); color: var(--surface); }
+.shop-pill:hover { background: var(--accent); border-color: var(--accent); }
 .icon-btn {
   width: 42px; height: 42px;
   display: inline-grid; place-items: center;
@@ -401,7 +403,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 @media (max-width: 1024px) {
   .nav { gap: 18px; }
-  .contact-pill { display: none; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
@@ -432,6 +433,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @media (max-width: 600px) {
   .page { margin: 6px auto; padding: 0 6px; }
   .logo-mark { width: 32px; height: 32px; }
+  .shop-pill { width: 42px; padding: 0; justify-content: center; }
+  .shop-label { display: none; }
   .site-header { padding: 10px 12px 14px; }
   .logo { font-size: 1.3rem; }
   .hero-main { min-height: 480px; padding: 22px; }

@@ -7,7 +7,7 @@
   document.querySelector('meta[name="description"]').setAttribute("content", article.excerpt);
 
   document.querySelector(".article-hero").innerHTML = `
-    ${mediaHtml(article.image.replace("w=1200", "w=1800"), article.title)}
+    ${mediaHtml(article.image, article.title)}
     <div class="eyebrow">${escapeHtml(categoryLabel(article.category))} · ${escapeHtml(article.tag)}</div>
     <h1>${escapeHtml(article.title)}</h1>
     <div class="hero-actions">

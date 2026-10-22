@@ -28,7 +28,7 @@ function mediaHtml(src, alt, extra = "") {
 function cardHtml(a) {
   return `
     <a class="card" href="${articleUrl(a)}">
-      ${mediaHtml(a.image.replace("w=1200", "w=700"), a.title, `<span class="tag">${escapeHtml(categoryLabel(a.category))} · ${escapeHtml(a.tag)}</span>`)}
+      ${mediaHtml(a.thumb || a.image, a.title, `<span class="tag">${escapeHtml(categoryLabel(a.category))} · ${escapeHtml(a.tag)}</span>`)}
       <div class="card-title"><h3>${escapeHtml(a.title)}</h3><span class="arrow">${ICONS.arrow}</span></div>
       <p>${escapeHtml(a.excerpt)}</p>
       <div class="meta">

@@ -1,7 +1,8 @@
 // Contenu éditorial du média. Pour publier un nouvel article, ajoutez un objet
 // en tête de liste : il apparaîtra automatiquement sur l'accueil et aura sa page.
-const IMG = (id, w = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+// Photos générées pour le média (Higgsfield) : version pleine taille + miniature légère
+const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3Kwk91zPCT78hRtN6MFnG2be45S/hf_20261022_";
+const PHOTO = (id) => ({ image: `${HF}${id}.png`, thumb: `${HF}${id}_min.webp` });
 
 window.CATEGORIES = [
   { id: "mode", label: "Mode" },
@@ -17,7 +18,7 @@ window.ARTICLES = [
     title: "Comment avoir l'allure parfaite tout en restant pratique",
     excerpt:
       "Être élégante ne veut pas dire sacrifier son confort : nos règles simples pour un style soigné, du matin au soir.",
-    image: IMG("photo-1515886657613-9f3515b0c78f"),
+    ...PHOTO("093822_03079144-028b-4a0f-a65b-48dcf5efd2e2"),
     author: "Léa",
     date: "2026-10-20",
     readTime: 6,
@@ -40,7 +41,7 @@ window.ARTICLES = [
     title: "Les nouvelles collections d'automne sont arrivées",
     excerpt:
       "Trench, cuir patiné et maille torsadée : ce qu'on retient des vitrines de la saison.",
-    image: IMG("photo-1509631179647-0177331693ae"),
+    ...PHOTO("093730_2fc93269-ed5c-4c32-b6ff-e05c26e1f3d1"),
     author: "Léa",
     date: "2026-10-18",
     readTime: 5,
@@ -61,7 +62,7 @@ window.ARTICLES = [
     title: "L'art de superposer ses bijoux en or",
     excerpt:
       "Chaînes fines, joncs et bagues empilées : la méthode pour un rendu précieux sans en faire trop.",
-    image: IMG("photo-1611591437281-460bfbe1220a"),
+    ...PHOTO("093823_ec5f4fea-0f3b-4ad8-8184-17c37bbcadd3"),
     author: "Léa",
     date: "2026-10-16",
     readTime: 4,
@@ -83,7 +84,7 @@ window.ARTICLES = [
     title: "Un salon apaisant en tons naturels",
     excerpt:
       "Lin, bois clair et terre cuite : composer une pièce à vivre douce et lumineuse.",
-    image: IMG("photo-1586023492125-27b2c045efd7"),
+    ...PHOTO("093822_0f50d973-797d-4cf2-a7b4-6600a19cc446"),
     author: "Léa",
     date: "2026-10-14",
     readTime: 5,
@@ -104,7 +105,7 @@ window.ARTICLES = [
     title: "Boucles d'oreilles statement : oser le volume",
     excerpt:
       "Une seule pièce forte suffit à transformer une tenue simple. Nos conseils pour bien les choisir.",
-    image: IMG("photo-1535632066927-ab7c9ab60908"),
+    ...PHOTO("093823_e0074063-badd-40f8-a711-3c61074f5ca0"),
     author: "Léa",
     date: "2026-10-12",
     readTime: 3,
@@ -123,7 +124,7 @@ window.ARTICLES = [
     title: "Créer une chambre cocon pour l'hiver",
     excerpt:
       "Linge de lit lavé, lumières tamisées et quelques objets choisis : la recette d'une chambre où l'on dort bien.",
-    image: IMG("photo-1505693416388-ac5ce068fe85"),
+    ...PHOTO("093731_65099e77-b427-4c1e-8269-75ea6baf36ee"),
     author: "Léa",
     date: "2026-10-10",
     readTime: 4,
@@ -142,7 +143,7 @@ window.ARTICLES = [
     title: "Construire une garde-robe capsule en 15 pièces",
     excerpt:
       "Moins de vêtements, plus de tenues : la liste des basiques qui se combinent entre eux.",
-    image: IMG("photo-1490481651871-ab68de25d43d"),
+    ...PHOTO("093731_3773062b-69d3-4ae6-be1a-e8ef3f72d3fa"),
     author: "Léa",
     date: "2026-10-08",
     readTime: 7,
@@ -161,7 +162,7 @@ window.ARTICLES = [
     title: "La perle se réinvente : nos colliers préférés",
     excerpt:
       "Loin du rang sage, la perle se porte irrégulière, mêlée à l'or ou en pendentif solitaire.",
-    image: IMG("photo-1599643478518-a784e5dc4c8f"),
+    ...PHOTO("093731_783aa4da-fd6c-4fbe-beb6-868b74676c2a"),
     author: "Léa",
     date: "2026-10-06",
     readTime: 4,
@@ -180,7 +181,7 @@ window.ARTICLES = [
     title: "Faire entrer le végétal dans chaque pièce",
     excerpt:
       "Quelles plantes choisir selon la lumière, et comment les mettre en scène.",
-    image: IMG("photo-1524758631624-e2822e304c36"),
+    ...PHOTO("093856_ca710fa0-daed-464e-ab64-629b0531c9ce"),
     author: "Léa",
     date: "2026-10-04",
     readTime: 5,
@@ -199,7 +200,7 @@ window.ARTICLES = [
     title: "Faire son shopping de façon plus responsable",
     excerpt:
       "Seconde main, matières durables, achats réfléchis : les bons réflexes, sans culpabiliser.",
-    image: IMG("photo-1483985988355-763728e1935b"),
+    ...PHOTO("093856_c336cf06-3304-45a4-86ed-16c479d34fa3"),
     author: "Léa",
     date: "2026-10-02",
     readTime: 6,
@@ -218,7 +219,7 @@ window.ARTICLES = [
     title: "Bagues empilées : la composition idéale",
     excerpt:
       "Joncs fins, chevalières et anneaux sculptés : comment composer ses mains.",
-    image: IMG("photo-1515562141207-7a88fb7ce338"),
+    ...PHOTO("093856_5dc663dd-65a7-4eda-9c88-94a71671d466"),
     author: "Léa",
     date: "2026-09-30",
     readTime: 3,
@@ -237,7 +238,7 @@ window.ARTICLES = [
     title: "Une salle à manger conviviale et chaleureuse",
     excerpt:
       "Grande table, chaises dépareillées et vaisselle artisanale : l'esprit maison de famille.",
-    image: IMG("photo-1493663284031-b7e3aefcae8e"),
+    ...PHOTO("093920_7119d1d0-7897-4085-8232-066eb0a1c606"),
     author: "Léa",
     date: "2026-09-28",
     readTime: 5,

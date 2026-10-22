@@ -21,6 +21,13 @@ const articleUrl = (a) => `article.html?slug=${encodeURIComponent(a.slug)}`;
 const escapeHtml = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+function avatarHtml(name) {
+  const photo = (window.AUTHORS[name] || {}).photo;
+  return photo
+    ? `<span class="avatar"><img src="${photo}" alt="" onerror="this.remove()">${initials(name)}</span>`
+    : `<span class="avatar">${initials(name)}</span>`;
+}
+
 function mediaHtml(src, alt, extra = "") {
   return `<div class="media">${extra}<img src="${src}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.classList.add('is-broken')"></div>`;
 }
@@ -32,7 +39,7 @@ function cardHtml(a) {
       <div class="card-title"><h3>${escapeHtml(a.title)}</h3><span class="arrow">${ICONS.arrow}</span></div>
       <p>${escapeHtml(a.excerpt)}</p>
       <div class="meta">
-        <span class="avatar">${initials(a.author)}</span>${escapeHtml(a.author)}
+        ${avatarHtml(a.author)}${escapeHtml(a.author)}
         <span class="dot"></span><time datetime="${a.date}">${formatDate(a.date)}</time>
       </div>
     </a>`;

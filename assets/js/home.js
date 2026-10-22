@@ -16,7 +16,7 @@ function renderHero() {
       <div class="hero-foot">
         <div class="hero-actions">
           <span class="pill pill-light">Lire l'article ${ICONS.arrow}</span>
-          <span class="author-chip"><span class="avatar">${initials(main.author)}</span>par ${escapeHtml(main.author)}</span>
+          <span class="author-chip">${avatarHtml(main.author)}par ${escapeHtml(main.author)}</span>
         </div>
         <p class="hero-note">${escapeHtml(main.excerpt)}</p>
       </div>

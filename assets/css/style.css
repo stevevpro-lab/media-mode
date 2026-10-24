@@ -409,7 +409,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .footer-top { grid-template-columns: 1fr 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
-/* Menu replié dès que les six liens ne tiennent plus sur une ligne */
+/* Menu replié dès que les rubriques ne tiennent plus sur une ligne */
 @media (max-width: 1200px) {
   .nav {
     display: none;

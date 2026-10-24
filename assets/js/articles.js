@@ -4,9 +4,13 @@
 const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3Kwk91zPCT78hRtN6MFnG2be45S/hf_";
 const PHOTO = (id) => ({ image: `${HF}${id}.png`, thumb: `${HF}${id}_min.webp` });
 
-// Photo des autrices, affichée dans les pastilles « par … »
+// Une autrice par rubrique : elle signe tous les articles de sa catégorie
 window.AUTHORS = {
-  "Léa": { photo: `${HF}20261022_095813_0819bc9c-79ca-4d71-84ad-1954d6472a4c_min.webp` },
+  "Léa": { rubrique: "mode", photo: `${HF}20261022_095813_0819bc9c-79ca-4d71-84ad-1954d6472a4c_min.webp` },
+  "Claire": { rubrique: "accessoires", photo: `${HF}20261024_140157_5bc8b425-41c2-43d1-b2b1-4ea359560c98_min.webp` },
+  "Inès": { rubrique: "bijoux", photo: `${HF}20261024_140157_19630e36-0fdf-461c-b637-003f49038acf_min.webp` },
+  "Sophie": { rubrique: "maroquinerie", photo: `${HF}20261024_140157_12c681ea-9c08-4979-88b0-de19046d7075_min.webp` },
+  "Camille": { rubrique: "maison-deco", photo: `${HF}20261024_140157_ffda3c1c-8074-421f-8694-8d2ec15cc0a0_min.webp` },
 };
 
 window.CATEGORIES = [
@@ -26,7 +30,7 @@ window.ARTICLES = [
     excerpt:
       "Noué au cou, dans les cheveux ou sur l'anse d'un sac : l'accessoire le plus simple pour réveiller une tenue.",
     ...PHOTO("20261024_125739_ab02fdfb-ccb7-4767-aa0e-b4e14b8dff6d"),
-    author: "Léa",
+    author: "Claire",
     date: "2026-10-23",
     readTime: 4,
     body: [
@@ -47,7 +51,7 @@ window.ARTICLES = [
     excerpt:
       "Ceinture fine, béret en laine, lunettes écaille : les pièces qui font la différence sans renouveler sa garde-robe.",
     ...PHOTO("20261024_125739_a78c99d8-04e8-4522-8965-8889e5e95333"),
-    author: "Léa",
+    author: "Claire",
     date: "2026-10-21",
     readTime: 5,
     body: [
@@ -68,7 +72,7 @@ window.ARTICLES = [
     excerpt:
       "Coupe, cuir, coutures : les points à regarder avant d'investir dans un beau sac.",
     ...PHOTO("20261024_125738_d50ffa03-3e01-49e4-8389-b1ea8f7f9c65"),
-    author: "Léa",
+    author: "Sophie",
     date: "2026-10-22",
     readTime: 6,
     body: [
@@ -89,7 +93,7 @@ window.ARTICLES = [
     excerpt:
       "Nourrir, protéger, ranger : les gestes simples pour garder sacs et portefeuilles beaux longtemps.",
     ...PHOTO("20261024_125738_09fae5ce-4801-4957-b493-4bbe99202cd4"),
-    author: "Léa",
+    author: "Sophie",
     date: "2026-10-19",
     readTime: 4,
     body: [
@@ -154,7 +158,7 @@ window.ARTICLES = [
     excerpt:
       "Chaînes fines, joncs et bagues empilées : la méthode pour un rendu précieux sans en faire trop.",
     ...PHOTO("20261022_093823_ec5f4fea-0f3b-4ad8-8184-17c37bbcadd3"),
-    author: "Léa",
+    author: "Inès",
     date: "2026-10-16",
     readTime: 4,
     featured: true,
@@ -176,7 +180,7 @@ window.ARTICLES = [
     excerpt:
       "Lin, bois clair et terre cuite : composer une pièce à vivre douce et lumineuse.",
     ...PHOTO("20261022_093822_0f50d973-797d-4cf2-a7b4-6600a19cc446"),
-    author: "Léa",
+    author: "Camille",
     date: "2026-10-14",
     readTime: 5,
     body: [
@@ -197,7 +201,7 @@ window.ARTICLES = [
     excerpt:
       "Une seule pièce forte suffit à transformer une tenue simple. Nos conseils pour bien les choisir.",
     ...PHOTO("20261022_093823_e0074063-badd-40f8-a711-3c61074f5ca0"),
-    author: "Léa",
+    author: "Inès",
     date: "2026-10-12",
     readTime: 3,
     body: [
@@ -216,7 +220,7 @@ window.ARTICLES = [
     excerpt:
       "Linge de lit lavé, lumières tamisées et quelques objets choisis : la recette d'une chambre où l'on dort bien.",
     ...PHOTO("20261022_093731_65099e77-b427-4c1e-8269-75ea6baf36ee"),
-    author: "Léa",
+    author: "Camille",
     date: "2026-10-10",
     readTime: 4,
     body: [
@@ -254,7 +258,7 @@ window.ARTICLES = [
     excerpt:
       "Loin du rang sage, la perle se porte irrégulière, mêlée à l'or ou en pendentif solitaire.",
     ...PHOTO("20261022_093731_783aa4da-fd6c-4fbe-beb6-868b74676c2a"),
-    author: "Léa",
+    author: "Inès",
     date: "2026-10-06",
     readTime: 4,
     body: [
@@ -273,7 +277,7 @@ window.ARTICLES = [
     excerpt:
       "Quelles plantes choisir selon la lumière, et comment les mettre en scène.",
     ...PHOTO("20261022_093856_ca710fa0-daed-464e-ab64-629b0531c9ce"),
-    author: "Léa",
+    author: "Camille",
     date: "2026-10-04",
     readTime: 5,
     body: [
@@ -311,7 +315,7 @@ window.ARTICLES = [
     excerpt:
       "Joncs fins, chevalières et anneaux sculptés : comment composer ses mains.",
     ...PHOTO("20261022_093856_5dc663dd-65a7-4eda-9c88-94a71671d466"),
-    author: "Léa",
+    author: "Inès",
     date: "2026-09-30",
     readTime: 3,
     body: [
@@ -330,7 +334,7 @@ window.ARTICLES = [
     excerpt:
       "Grande table, chaises dépareillées et vaisselle artisanale : l'esprit maison de famille.",
     ...PHOTO("20261022_093920_7119d1d0-7897-4085-8232-066eb0a1c606"),
-    author: "Léa",
+    author: "Camille",
     date: "2026-09-28",
     readTime: 5,
     body: [

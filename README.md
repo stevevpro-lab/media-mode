@@ -1,4 +1,6 @@
-# luniversdelea.art
+# Les inspirations de Léa
+
+Site : lesinspirationsdelea.fr
 
 Le média de Léa : **Mode, Déco et Bijoux**.
 
@@ -28,7 +30,7 @@ Ajoutez un objet en tête de `window.ARTICLES` dans `assets/js/articles.js` :
 ```js
 {
   slug: "mon-nouvel-article",       // utilisé dans l'adresse de la page
-  category: "mode",                 // mode, deco ou bijoux
+  category: "mode",                 // mode, accessoires, bijoux, maroquinerie ou maison-deco
   tag: "Tendances",
   title: "Titre de l'article",
   excerpt: "Une ou deux phrases de résumé.",

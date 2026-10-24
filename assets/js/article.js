@@ -3,7 +3,7 @@
   const slug = new URLSearchParams(location.search).get("slug");
   const article = window.ARTICLES.find((a) => a.slug === slug) || window.ARTICLES[0];
 
-  document.title = `${article.title} · luniversdelea.art`;
+  document.title = `${article.title} · Les inspirations de Léa`;
   document.querySelector('meta[name="description"]').setAttribute("content", article.excerpt);
 
   document.querySelector(".article-hero").innerHTML = `

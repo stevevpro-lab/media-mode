@@ -441,7 +441,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .shop-pill { width: 42px; padding: 0; justify-content: center; }
   .shop-label { display: none; }
   .site-header { padding: 10px 12px 14px; }
-  .logo { font-size: 1.3rem; }
+  .logo { font-size: 1.1rem; white-space: normal; line-height: 1.05; min-width: 0; }
+  .site-header { gap: 8px; }
+  .header-actions { gap: 6px; }
+  .icon-btn, .shop-pill { width: 38px; height: 38px; }
   .hero-main { min-height: 480px; padding: 22px; }
   .hero-note { display: none; }
   .hero-side { grid-template-columns: 1fr; }

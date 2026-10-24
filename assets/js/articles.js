@@ -1,21 +1,107 @@
 // Contenu éditorial du média. Pour publier un nouvel article, ajoutez un objet
 // en tête de liste : il apparaîtra automatiquement sur l'accueil et aura sa page.
 // Photos générées pour le média (Higgsfield) : version pleine taille + miniature légère
-const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3Kwk91zPCT78hRtN6MFnG2be45S/hf_20261022_";
+const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3Kwk91zPCT78hRtN6MFnG2be45S/hf_";
 const PHOTO = (id) => ({ image: `${HF}${id}.png`, thumb: `${HF}${id}_min.webp` });
 
 // Photo des autrices, affichée dans les pastilles « par … »
 window.AUTHORS = {
-  "Léa": { photo: `${HF}095813_0819bc9c-79ca-4d71-84ad-1954d6472a4c_min.webp` },
+  "Léa": { photo: `${HF}20261022_095813_0819bc9c-79ca-4d71-84ad-1954d6472a4c_min.webp` },
 };
 
 window.CATEGORIES = [
   { id: "mode", label: "Mode" },
-  { id: "deco", label: "Déco" },
+  { id: "accessoires", label: "Accessoires" },
   { id: "bijoux", label: "Bijoux" },
+  { id: "maroquinerie", label: "Maroquinerie" },
+  { id: "maison-deco", label: "Maison-Déco" },
 ];
 
 window.ARTICLES = [
+  {
+    slug: "foulard-soie-facons-de-le-porter",
+    category: "accessoires",
+    tag: "Style",
+    title: "Le foulard en soie : cinq façons de le porter cet automne",
+    excerpt:
+      "Noué au cou, dans les cheveux ou sur l'anse d'un sac : l'accessoire le plus simple pour réveiller une tenue.",
+    ...PHOTO("20261024_125739_ab02fdfb-ccb7-4767-aa0e-b4e14b8dff6d"),
+    author: "Léa",
+    date: "2026-10-23",
+    readTime: 4,
+    body: [
+      "Un carré de soie ne prend pas de place et change tout. C'est l'accessoire qu'on glisse dans son sac le matin et qui sauve une tenue un peu sage.",
+      "## Noué au cou",
+      "Plié en bandeau et noué sur le côté, il apporte une touche de couleur près du visage. Parfait avec une chemise blanche ou un pull col rond.",
+      "## Dans les cheveux",
+      "En headband ou noué autour d'une queue de cheval basse, il donne immédiatement un air soigné, même un jour de cheveux rebelles.",
+      "## Sur le sac",
+      "Enroulé autour de l'anse d'un sac en cuir, il le personnalise et le protège de l'usure.",
+    ],
+  },
+  {
+    slug: "accessoires-essentiels-saison",
+    category: "accessoires",
+    tag: "Essentiels",
+    title: "Les accessoires essentiels de la saison",
+    excerpt:
+      "Ceinture fine, béret en laine, lunettes écaille : les pièces qui font la différence sans renouveler sa garde-robe.",
+    ...PHOTO("20261024_125739_a78c99d8-04e8-4522-8965-8889e5e95333"),
+    author: "Léa",
+    date: "2026-10-21",
+    readTime: 5,
+    body: [
+      "Inutile de tout racheter pour être à la page : quelques accessoires bien choisis suffisent à donner un coup de neuf à vos tenues.",
+      "## La ceinture fine",
+      "En cuir, avec une boucle dorée discrète, elle marque la taille sur un manteau, une robe ou un pull long.",
+      "## Le béret",
+      "En laine, dans un ton camel ou chocolat, il réchauffe et apporte une touche parisienne.",
+      "## Les lunettes écaille",
+      "Elles adoucissent le visage et s'accordent avec tous les tons chauds de la saison.",
+    ],
+  },
+  {
+    slug: "sac-cuir-qui-dure",
+    category: "maroquinerie",
+    tag: "Investissement",
+    title: "Choisir un sac en cuir qui dure toute une vie",
+    excerpt:
+      "Coupe, cuir, coutures : les points à regarder avant d'investir dans un beau sac.",
+    ...PHOTO("20261024_125738_d50ffa03-3e01-49e4-8389-b1ea8f7f9c65"),
+    author: "Léa",
+    date: "2026-10-22",
+    readTime: 6,
+    body: [
+      "Un beau sac en cuir est l'un des rares achats de mode qui gagne en charme avec les années. Encore faut-il bien le choisir.",
+      "## Le cuir",
+      "Préférez un cuir pleine fleur, tanné végétal si possible : il se patine joliment au lieu de s'abîmer.",
+      "## Les coutures et finitions",
+      "Des coutures régulières, des tranches bien lissées et des pièces métalliques lourdes sont signe de qualité.",
+      "## La forme",
+      "Une forme structurée dans un ton cognac, noir ou camel traverse les modes et s'accorde avec tout.",
+    ],
+  },
+  {
+    slug: "entretenir-sa-maroquinerie",
+    category: "maroquinerie",
+    tag: "Conseils",
+    title: "Bien entretenir sa maroquinerie",
+    excerpt:
+      "Nourrir, protéger, ranger : les gestes simples pour garder sacs et portefeuilles beaux longtemps.",
+    ...PHOTO("20261024_125738_09fae5ce-4801-4957-b493-4bbe99202cd4"),
+    author: "Léa",
+    date: "2026-10-19",
+    readTime: 4,
+    body: [
+      "Le cuir est une matière vivante. Quelques minutes d'entretien par saison suffisent à le garder souple et lumineux.",
+      "## Nourrir le cuir",
+      "Une crème incolore appliquée deux à trois fois par an évite qu'il ne se dessèche et ne craquelle.",
+      "## Le protéger",
+      "Un spray imperméabilisant avant l'hiver limite les taches de pluie.",
+      "## Bien ranger",
+      "Rembourrez vos sacs avec du papier de soie et rangez-les dans leur housse en tissu, à l'abri de la lumière.",
+    ],
+  },
   {
     slug: "allure-parfaite-et-pratique",
     category: "mode",
@@ -23,7 +109,7 @@ window.ARTICLES = [
     title: "Comment avoir l'allure parfaite tout en restant pratique",
     excerpt:
       "Être élégante ne veut pas dire sacrifier son confort : nos règles simples pour un style soigné, du matin au soir.",
-    ...PHOTO("093822_03079144-028b-4a0f-a65b-48dcf5efd2e2"),
+    ...PHOTO("20261022_093822_03079144-028b-4a0f-a65b-48dcf5efd2e2"),
     author: "Léa",
     date: "2026-10-20",
     readTime: 6,
@@ -46,7 +132,7 @@ window.ARTICLES = [
     title: "Les nouvelles collections d'automne sont arrivées",
     excerpt:
       "Trench, cuir patiné et maille torsadée : ce qu'on retient des vitrines de la saison.",
-    ...PHOTO("093730_2fc93269-ed5c-4c32-b6ff-e05c26e1f3d1"),
+    ...PHOTO("20261022_093730_2fc93269-ed5c-4c32-b6ff-e05c26e1f3d1"),
     author: "Léa",
     date: "2026-10-18",
     readTime: 5,
@@ -67,7 +153,7 @@ window.ARTICLES = [
     title: "L'art de superposer ses bijoux en or",
     excerpt:
       "Chaînes fines, joncs et bagues empilées : la méthode pour un rendu précieux sans en faire trop.",
-    ...PHOTO("093823_ec5f4fea-0f3b-4ad8-8184-17c37bbcadd3"),
+    ...PHOTO("20261022_093823_ec5f4fea-0f3b-4ad8-8184-17c37bbcadd3"),
     author: "Léa",
     date: "2026-10-16",
     readTime: 4,
@@ -84,12 +170,12 @@ window.ARTICLES = [
   },
   {
     slug: "salon-tons-naturels",
-    category: "deco",
+    category: "maison-deco",
     tag: "Intérieur",
     title: "Un salon apaisant en tons naturels",
     excerpt:
       "Lin, bois clair et terre cuite : composer une pièce à vivre douce et lumineuse.",
-    ...PHOTO("093822_0f50d973-797d-4cf2-a7b4-6600a19cc446"),
+    ...PHOTO("20261022_093822_0f50d973-797d-4cf2-a7b4-6600a19cc446"),
     author: "Léa",
     date: "2026-10-14",
     readTime: 5,
@@ -110,7 +196,7 @@ window.ARTICLES = [
     title: "Boucles d'oreilles statement : oser le volume",
     excerpt:
       "Une seule pièce forte suffit à transformer une tenue simple. Nos conseils pour bien les choisir.",
-    ...PHOTO("093823_e0074063-badd-40f8-a711-3c61074f5ca0"),
+    ...PHOTO("20261022_093823_e0074063-badd-40f8-a711-3c61074f5ca0"),
     author: "Léa",
     date: "2026-10-12",
     readTime: 3,
@@ -124,12 +210,12 @@ window.ARTICLES = [
   },
   {
     slug: "chambre-cocon",
-    category: "deco",
+    category: "maison-deco",
     tag: "Chambre",
     title: "Créer une chambre cocon pour l'hiver",
     excerpt:
       "Linge de lit lavé, lumières tamisées et quelques objets choisis : la recette d'une chambre où l'on dort bien.",
-    ...PHOTO("093731_65099e77-b427-4c1e-8269-75ea6baf36ee"),
+    ...PHOTO("20261022_093731_65099e77-b427-4c1e-8269-75ea6baf36ee"),
     author: "Léa",
     date: "2026-10-10",
     readTime: 4,
@@ -148,7 +234,7 @@ window.ARTICLES = [
     title: "Construire une garde-robe capsule en 15 pièces",
     excerpt:
       "Moins de vêtements, plus de tenues : la liste des basiques qui se combinent entre eux.",
-    ...PHOTO("093731_3773062b-69d3-4ae6-be1a-e8ef3f72d3fa"),
+    ...PHOTO("20261022_093731_3773062b-69d3-4ae6-be1a-e8ef3f72d3fa"),
     author: "Léa",
     date: "2026-10-08",
     readTime: 7,
@@ -167,7 +253,7 @@ window.ARTICLES = [
     title: "La perle se réinvente : nos colliers préférés",
     excerpt:
       "Loin du rang sage, la perle se porte irrégulière, mêlée à l'or ou en pendentif solitaire.",
-    ...PHOTO("093731_783aa4da-fd6c-4fbe-beb6-868b74676c2a"),
+    ...PHOTO("20261022_093731_783aa4da-fd6c-4fbe-beb6-868b74676c2a"),
     author: "Léa",
     date: "2026-10-06",
     readTime: 4,
@@ -181,12 +267,12 @@ window.ARTICLES = [
   },
   {
     slug: "plantes-interieur",
-    category: "deco",
+    category: "maison-deco",
     tag: "Végétal",
     title: "Faire entrer le végétal dans chaque pièce",
     excerpt:
       "Quelles plantes choisir selon la lumière, et comment les mettre en scène.",
-    ...PHOTO("093856_ca710fa0-daed-464e-ab64-629b0531c9ce"),
+    ...PHOTO("20261022_093856_ca710fa0-daed-464e-ab64-629b0531c9ce"),
     author: "Léa",
     date: "2026-10-04",
     readTime: 5,
@@ -205,7 +291,7 @@ window.ARTICLES = [
     title: "Faire son shopping de façon plus responsable",
     excerpt:
       "Seconde main, matières durables, achats réfléchis : les bons réflexes, sans culpabiliser.",
-    ...PHOTO("093856_c336cf06-3304-45a4-86ed-16c479d34fa3"),
+    ...PHOTO("20261022_093856_c336cf06-3304-45a4-86ed-16c479d34fa3"),
     author: "Léa",
     date: "2026-10-02",
     readTime: 6,
@@ -224,7 +310,7 @@ window.ARTICLES = [
     title: "Bagues empilées : la composition idéale",
     excerpt:
       "Joncs fins, chevalières et anneaux sculptés : comment composer ses mains.",
-    ...PHOTO("093856_5dc663dd-65a7-4eda-9c88-94a71671d466"),
+    ...PHOTO("20261022_093856_5dc663dd-65a7-4eda-9c88-94a71671d466"),
     author: "Léa",
     date: "2026-09-30",
     readTime: 3,
@@ -238,12 +324,12 @@ window.ARTICLES = [
   },
   {
     slug: "salle-a-manger-conviviale",
-    category: "deco",
+    category: "maison-deco",
     tag: "Art de vivre",
     title: "Une salle à manger conviviale et chaleureuse",
     excerpt:
       "Grande table, chaises dépareillées et vaisselle artisanale : l'esprit maison de famille.",
-    ...PHOTO("093920_7119d1d0-7897-4085-8232-066eb0a1c606"),
+    ...PHOTO("20261022_093920_7119d1d0-7897-4085-8232-066eb0a1c606"),
     author: "Léa",
     date: "2026-09-28",
     readTime: 5,

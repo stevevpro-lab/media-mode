@@ -64,7 +64,7 @@ function initBlog() {
       (a) =>
         (category === "all" || a.category === category) &&
         (!q || normalize(`${a.title} ${a.excerpt} ${a.tag}`).includes(q))
-    );
+    ).sort((a, b) => b.date.localeCompare(a.date));
 
     grid.innerHTML = list.length
       ? list.slice(0, visible).map(cardHtml).join("")

@@ -1,6 +1,6 @@
 # Les inspirations de Léa
 
-Site : luniversdelea.art
+Site : lesinspirationsdelea.fr
 
 Le média de Léa : **Mode, Déco et Bijoux**.
 

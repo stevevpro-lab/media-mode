@@ -409,7 +409,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .footer-top { grid-template-columns: 1fr 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
-@media (max-width: 820px) {
+/* Menu replié dès que les six liens ne tiennent plus sur une ligne */
+@media (max-width: 1200px) {
   .nav {
     display: none;
     position: absolute;
@@ -427,6 +428,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .nav a:last-child { border-bottom: 0; }
   .shell { position: relative; }
   .burger { display: inline-grid; }
+}
+@media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-main { min-height: 540px; padding: 28px; }
   .hero-side { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
